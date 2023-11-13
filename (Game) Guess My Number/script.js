@@ -2,6 +2,8 @@
 
 const secretNumber = Math.trunc(Math.random() * 20) + 1;
 let StartingScore = 20;
+
+//Rather than resetting the values back to original state, I preferred using browser's cookie to save the highest score. In this way, I am avoiding redundant code.
 let Highscore = document.cookie ? Number(document.cookie) : 0;
 document.querySelector('.highscore').textContent = Highscore;
 
